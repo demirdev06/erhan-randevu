@@ -12,8 +12,8 @@ from flask import Flask, g, jsonify, redirect, render_template, request, session
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / 'appointments.db'
 SECRET_KEY = os.environ.get('ERHAN_SECRET_KEY', 'change-this-secret-key')
-OWNER_USERNAME = os.environ.get('ERHAN_OWNER_USERNAME', 'erhan')
-OWNER_PASSWORD = os.environ.get('ERHAN_OWNER_PASSWORD', 'Erhan123!')
+OWNER_USERNAME = os.environ.get('ERHAN_OWNER_USERNAME', 'Erhan')
+OWNER_PASSWORD = os.environ.get('ERHAN_OWNER_PASSWORD', 'Erhan!2026#Kuafor')
 
 app = Flask(__name__)
 app.config.update(SECRET_KEY=SECRET_KEY)
