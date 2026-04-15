@@ -3,152 +3,279 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow" />
   <title>Erhan Paneli</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--gold:#c9a84c;--cream:#f5f0e8;--dark:#0e0c09;--dark2:#1a1710;--dark3:#231f18;--text:#d4cfc4;--text-dim:#7a7468}
-    *{box-sizing:border-box;margin:0;padding:0} body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif}
-    .container{max-width:1240px;margin:0 auto;padding:28px 24px 60px}
-    .top{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:24px}
-    h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:56px;color:var(--cream)} .sub{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:8px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap} button,a{padding:12px 16px;border:none;text-decoration:none;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
-    .btn-main{background:var(--gold);color:var(--dark)} .btn-ghost{background:transparent;border:1px solid rgba(201,168,76,.25);color:var(--text-dim)}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
-    .stat{background:var(--dark2);border:1px solid rgba(201,168,76,.12);padding:18px}.stat small{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
-    .stat strong{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);font-weight:300}
-    .table-wrap{overflow:auto;border:1px solid rgba(201,168,76,.12)} table{width:100%;min-width:960px;border-collapse:collapse;background:var(--dark2)} th,td{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:left;font-size:13px;vertical-align:top}
-    th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)} .badge{display:inline-block;padding:7px 10px;border:1px solid rgba(201,168,76,.25);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
-    .row-actions{display:flex;gap:8px;flex-wrap:wrap}.empty{padding:30px;text-align:center;background:var(--dark2);border:1px dashed rgba(201,168,76,.2);color:var(--text-dim)}
-    .msg{margin-top:14px;min-height:20px;color:var(--gold)}
-    @media (max-width:900px){.stats{grid-template-columns:1fr 1fr}} @media (max-width:600px){.stats{grid-template-columns:1fr}}
+    :root {
+      --gold: #c9a84c;
+      --cream: #f5f0e8;
+      --dark: #0e0c09;
+      --dark2: #1a1710;
+      --dark3: #231f18;
+      --text: #d4cfc4;
+      --text-dim: #7a7468;
+      --danger: #ff6b6b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      padding: 28px;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--cream);
+    }
+    .sub {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      border: 1px solid rgba(201,168,76,.25);
+      background: transparent;
+      color: var(--cream);
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .primary {
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .stat {
+      background: var(--dark2);
+      border: 1px solid rgba(201,168,76,.12);
+      padding: 18px;
+    }
+    .stat small {
+      display: block;
+      color: var(--text-dim);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .stat strong {
+      font-size: 34px;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+    }
+    .msg {
+      min-height: 22px;
+      margin-bottom: 14px;
+      color: var(--danger);
+      font-size: 14px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid rgba(201,168,76,.12);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 920px;
+      background: var(--dark2);
+    }
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      text-align: left;
+      font-size: 13px;
+      vertical-align: top;
+    }
+    th {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.02);
+    }
+    .empty {
+      background: var(--dark2);
+      border: 1px dashed rgba(201,168,76,.2);
+      color: var(--text-dim);
+      text-align: center;
+      padding: 36px 20px;
+    }
+    .row-btns {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid rgba(201,168,76,.25);
+      color: var(--gold);
+      padding: 6px 10px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 900px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
     <div class="top">
       <div>
         <h1>Erhan Paneli</h1>
-        <p class="sub">Müşteri sitesinden gelen tüm randevular burada</p>
+        <div class="sub">Randevuları gör ve yönet</div>
       </div>
-      <div class="actions">
-        <a href="/" class="btn-ghost">Müşteri Sitesi</a>
-        <button class="btn-ghost" id="refreshBtn">Yenile</button>
-        <button class="btn-main" id="clearBtn">Tümünü Temizle</button>
-        <button class="btn-ghost" id="logoutBtn">Çıkış Yap</button>
+      <div class="btns">
+        <button id="clearBtn">Tümünü Temizle</button>
+        <button id="logoutBtn" class="primary">Çıkış Yap</button>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><small>Toplam Randevu</small><strong id="statTotal">0</strong></div>
+      <div class="stat"><small>Toplam</small><strong id="statTotal">0</strong></div>
       <div class="stat"><small>Bugün</small><strong id="statToday">0</strong></div>
       <div class="stat"><small>Yaklaşan</small><strong id="statUpcoming">0</strong></div>
-      <div class="stat"><small>Hizmet Çeşidi</small><strong id="statServices">0</strong></div>
+      <div class="stat"><small>Hizmet</small><strong id="statServices">0</strong></div>
     </div>
 
-    <div id="appointmentsBox" class="empty">Yükleniyor...</div>
     <div class="msg" id="message"></div>
+    <div id="appointmentsContainer"></div>
   </div>
-<script>
-  function setMessage(text) { document.getElementById('message').textContent = text || ''; }
-  function formatDate(dateStr) {
-    if (!dateStr) return '-';
-    return new Date(dateStr + 'T00:00:00').toLocaleDateString('tr-TR');
-  }
-  function formatDateTime(dateTime) {
-    if (!dateTime) return '-';
-    return new Date(dateTime).toLocaleString('tr-TR');
-  }
 
-  async function loadAppointments() {
-    setMessage('');
-    const res = await fetch('/admin/api/appointments');
-    if (res.status === 401 || res.redirected) {
-      window.location.href = '/erhan-giris';
-      return;
+  <script>
+    async function loadAppointments() {
+      const res = await fetch('/admin/api/appointments');
+      const data = await res.json();
+
+      if (!data.ok) {
+        document.getElementById('message').textContent = 'Randevular yüklenemedi.';
+        return;
+      }
+
+      document.getElementById('statTotal').textContent = data.stats.total;
+      document.getElementById('statToday').textContent = data.stats.today;
+      document.getElementById('statUpcoming').textContent = data.stats.upcoming;
+      document.getElementById('statServices').textContent = data.stats.services;
+
+      const box = document.getElementById('appointmentsContainer');
+
+      if (!data.items.length) {
+        box.innerHTML = '<div class="empty">Henüz randevu yok.</div>';
+        return;
+      }
+
+      box.innerHTML = `
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Müşteri</th>
+                <th>Telefon</th>
+                <th>Tarih</th>
+                <th>Saat</th>
+                <th>Hizmet</th>
+                <th>Not</th>
+                <th>Durum</th>
+                <th>Oluşturma</th>
+                <th>İşlem</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${data.items.map(item => `
+                <tr>
+                  <td>${item.name}</td>
+                  <td>${item.phone}</td>
+                  <td>${item.date}</td>
+                  <td>${item.time}</td>
+                  <td>${item.service}</td>
+                  <td>${item.note || '-'}</td>
+                  <td><span class="badge">${item.status}</span></td>
+                  <td>${item.created_at}</td>
+                  <td>
+                    <div class="row-btns">
+                      <button onclick="toggleStatus(${item.id})">Durum</button>
+                      <button onclick="deleteAppointment(${item.id})">Sil</button>
+                    </div>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
     }
-    const data = await res.json();
-    document.getElementById('statTotal').textContent = data.stats.total;
-    document.getElementById('statToday').textContent = data.stats.today;
-    document.getElementById('statUpcoming').textContent = data.stats.upcoming;
-    document.getElementById('statServices').textContent = data.stats.services;
 
-    const box = document.getElementById('appointmentsBox');
-    if (!data.appointments.length) {
-      box.className = 'empty';
-      box.innerHTML = 'Henüz randevu yok. Müşteri formundan kayıt oluştuğunda burada listelenecek.';
-      return;
+    async function toggleStatus(id) {
+      const res = await fetch(`/admin/api/appointments/${id}/toggle-status`, {
+        method: 'POST'
+      });
+      const data = await res.json();
+      document.getElementById('message').textContent = data.message || '';
+      loadAppointments();
     }
 
-    box.className = 'table-wrap';
-    box.innerHTML = `
-      <table>
-        <thead>
-          <tr>
-            <th>Müşteri</th>
-            <th>Telefon</th>
-            <th>Tarih</th>
-            <th>Saat</th>
-            <th>Hizmet</th>
-            <th>Not</th>
-            <th>Durum</th>
-            <th>Oluşturma</th>
-            <th>İşlem</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${data.appointments.map(item => `
-            <tr>
-              <td>${item.name}</td>
-              <td><a style="color:#f5f0e8;text-decoration:none" href="tel:${item.phone}">${item.phone}</a></td>
-              <td>${formatDate(item.date)}</td>
-              <td>${item.time}</td>
-              <td>${item.service}</td>
-              <td>${item.note || '-'}</td>
-              <td><span class="badge">${item.status}</span></td>
-              <td>${formatDateTime(item.created_at)}</td>
-              <td>
-                <div class="row-actions">
-                  <button class="btn-ghost" onclick="toggleStatus(${item.id})">Durum</button>
-                  <button class="btn-ghost" onclick="deleteAppointment(${item.id})">Sil</button>
-                </div>
-              </td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    `;
-  }
+    async function deleteAppointment(id) {
+      const res = await fetch(`/admin/api/appointments/${id}`, {
+        method: 'DELETE'
+      });
+      const data = await res.json();
+      document.getElementById('message').textContent = data.message || '';
+      loadAppointments();
+    }
 
-  async function toggleStatus(id) {
-    const res = await fetch(`/admin/api/appointments/${id}/toggle-status`, { method: 'POST' });
-    const data = await res.json();
-    setMessage(data.message || 'Durum güncellendi.');
+    document.getElementById('clearBtn').addEventListener('click', async () => {
+      const ok = confirm('Tüm randevular silinsin mi?');
+      if (!ok) return;
+
+      const res = await fetch('/admin/api/appointments', {
+        method: 'DELETE'
+      });
+      const data = await res.json();
+      document.getElementById('message').textContent = data.message || '';
+      loadAppointments();
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      const res = await fetch('/admin/logout', {
+        method: 'POST'
+      });
+      const data = await res.json();
+
+      if (data.ok && data.redirect) {
+        window.location.href = data.redirect;
+      }
+    });
+
     loadAppointments();
-  }
-
-  async function deleteAppointment(id) {
-    const res = await fetch(`/admin/api/appointments/${id}`, { method: 'DELETE' });
-    const data = await res.json();
-    setMessage(data.message || 'Randevu silindi.');
-    loadAppointments();
-  }
-
-  document.getElementById('refreshBtn').addEventListener('click', loadAppointments);
-  document.getElementById('clearBtn').addEventListener('click', async () => {
-    if (!confirm('Tüm randevuları silmek istediğine emin misin?')) return;
-    const res = await fetch('/admin/api/appointments', { method: 'DELETE' });
-    const data = await res.json();
-    setMessage(data.message || 'Temizlendi.');
-    loadAppointments();
-  });
-  document.getElementById('logoutBtn').addEventListener('click', async () => {
-    const res = await fetch('/admin/logout', { method: 'POST' });
-    const data = await res.json();
-    window.location.href = data.redirect || '/erhan-giris';
-  });
-
-  loadAppointments();
-</script>
+  </script>
 </body>
 </html>

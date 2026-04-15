@@ -3,68 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow" />
   <title>Erhan Paneli Giriş</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--gold:#c9a84c;--cream:#f5f0e8;--dark:#0e0c09;--dark2:#1a1710;--dark3:#231f18;--text:#d4cfc4;--text-dim:#7a7468}
-    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at top right,#2a2010 0,var(--dark) 55%);color:var(--text);font-family:'DM Sans',sans-serif;padding:20px}
-    .card{width:min(520px,100%);background:var(--dark2);border:1px solid rgba(201,168,76,.18);padding:34px}
-    h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:52px;color:var(--cream);margin-bottom:8px} .sub{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-    .note{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:16px;line-height:1.7;color:var(--text);margin-bottom:18px;font-size:14px}
-    .row{margin-bottom:16px}.row label{display:block;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-    .row input{width:100%;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.15);color:var(--cream)}
-    button,a{width:100%;display:inline-block;text-align:center;padding:16px 20px;text-decoration:none;border:none;font-size:11px;letter-spacing:3px;text-transform:uppercase}
-    button{background:var(--gold);color:var(--dark);cursor:pointer} a{margin-top:12px;border:1px solid rgba(201,168,76,.25);color:var(--text-dim)}
-    .msg{margin-top:12px;font-size:13px;color:#ffb0b0;min-height:18px}
+    :root {
+      --gold: #c9a84c;
+      --cream: #f5f0e8;
+      --dark: #0e0c09;
+      --dark2: #1a1710;
+      --dark3: #231f18;
+      --text: #d4cfc4;
+      --text-dim: #7a7468;
+      --danger: #ff6b6b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top right, #2a2010 0, var(--dark) 55%);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      padding: 24px;
+    }
+    .card {
+      width: min(520px, 100%);
+      background: var(--dark2);
+      border: 1px solid rgba(201,168,76,.18);
+      padding: 34px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      color: var(--cream);
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .sub {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .note {
+      background: rgba(201,168,76,.08);
+      border: 1px solid rgba(201,168,76,.18);
+      padding: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+    .row { margin-bottom: 16px; }
+    .row label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .row input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(201,168,76,.15);
+      color: var(--cream);
+      outline: none;
+    }
+    button, a {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      padding: 16px 20px;
+      text-decoration: none;
+      border: none;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    button {
+      background: var(--gold);
+      color: var(--dark);
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    a {
+      margin-top: 12px;
+      border: 1px solid rgba(201,168,76,.25);
+      color: var(--text-dim);
+    }
+    .msg {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--danger);
+      min-height: 18px;
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Erhan Paneli</h1>
     <p class="sub">Yönetim girişi</p>
-    <div class="row"><label>Kullanıcı Adı</label><input id="username" type="text" placeholder="Kullanıcı adı"/></div>
-    <div class="row"><label>Şifre</label><input id="password" type="password" placeholder="Şifre"/></div>
+
+    <div class="note">
+      Bu sayfa müşteri sitesinden ayrıdır. Müşteri sitede randevu oluşturunca kayıt doğrudan bu panele düşer.
+    </div>
+
+    <div class="row">
+      <label>Kullanıcı Adı</label>
+      <input id="username" type="text" placeholder="Kullanıcı adı">
+    </div>
+
+    <div class="row">
+      <label>Şifre</label>
+      <input id="password" type="password" placeholder="Şifre">
+    </div>
+
     <button id="loginBtn">Panele Giriş Yap</button>
     <div class="msg" id="message"></div>
     <a href="/">Müşteri sitesine dön</a>
   </div>
-<script>
-<script>
-document.getElementById('loginBtn').addEventListener('click', async () => {
-    const btn = document.getElementById('loginBtn');
-    const message = document.getElementById('message');
 
-    btn.disabled = true;
-    btn.textContent = 'Giriş yapılıyor...';
-    message.textContent = '';
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', async () => {
+      const btn = document.getElementById('loginBtn');
+      const message = document.getElementById('message');
 
-    try {
+      btn.disabled = true;
+      btn.textContent = 'Giriş yapılıyor...';
+      message.textContent = '';
+
+      try {
         const res = await fetch('/admin/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                username: document.getElementById('username').value.trim(),
-                password: document.getElementById('password').value
-            })
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            username: document.getElementById('username').value.trim(),
+            password: document.getElementById('password').value
+          })
         });
 
         const data = await res.json();
 
-        if (data.ok) {
-            window.location.href = data.redirect;
-            return;
+        if (data.ok && data.redirect) {
+          window.location.href = data.redirect;
+          return;
         }
 
         message.textContent = data.message || 'Giriş başarısız.';
-    } catch (err) {
+      } catch (err) {
         message.textContent = 'Bir hata oluştu. Tekrar deneyin.';
-    } finally {
+      } finally {
         btn.disabled = false;
         btn.textContent = 'Panele Giriş Yap';
-    }
-});
-</script>
-</script>
+      }
+    });
+  </script>
 </body>
 </html>

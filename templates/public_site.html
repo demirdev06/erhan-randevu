@@ -2,235 +2,1289 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="xHgM0ZHTZdyc_zFUSa5km9ZA79zHyWes4ASIzmUkraI" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Erhan Taş — Hair Artist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta name="description" content="Erhan Taş Hair Artist Beylikdüzü İstanbul. Saç kesimi, sakal tasarımı, fade, taper ve bakım için online randevu oluşturun." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    :root { --gold:#c9a84c; --gold-light:#e8c96a; --cream:#f5f0e8; --dark:#0e0c09; --dark2:#1a1710; --dark3:#231f18; --text:#d4cfc4; --text-dim:#7a7468; }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 42px;background:linear-gradient(to bottom, rgba(14,12,9,.95), transparent)}
-    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;color:var(--gold);text-decoration:none}
-    .nav-links{display:flex;gap:34px;list-style:none}
-    .nav-links a,.nav-cta{text-decoration:none;color:var(--text-dim);font-size:12px;letter-spacing:2px;text-transform:uppercase}
-    .nav-cta{border:1px solid var(--gold);padding:10px 20px;color:var(--gold)}
-    section{padding:110px 0}
-    .container{max-width:1180px;margin:0 auto;padding:0 32px}
-    #hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(ellipse 60% 80% at 70% 50%, #2a2010 0%, var(--dark) 70%)}
-    .hero-content{text-align:center;padding:0 20px}
-    .hero-eyebrow{font-size:11px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(72px,10vw,138px);font-weight:300;line-height:.92;color:var(--cream)}
-    .hero-title em{font-style:italic;color:var(--gold)}
-    .hero-subtitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,3vw,36px);letter-spacing:12px;color:var(--text-dim);margin:12px 0 46px}
-    .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .btn-primary,.btn-secondary{display:inline-block;text-decoration:none;padding:16px 34px;font-size:11px;letter-spacing:3px;text-transform:uppercase}
-    .btn-primary{background:var(--gold);color:var(--dark)}
-    .btn-secondary{border:1px solid rgba(255,255,255,.15);color:var(--cream)}
-    .section-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,72px);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:24px}
-    .section-title em{color:var(--gold);font-style:italic}
-    #hizmetler,#randevu,#konum{background:var(--dark2)}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
-    .service-card{background:var(--dark3);padding:40px 30px}
-    .service-name{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin:14px 0 12px}
-    .service-desc{font-size:14px;line-height:1.8;color:var(--text-dim);margin-bottom:20px}
-    .service-price{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;color:var(--gold)}
-    .about-grid,.booking-wrap,.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-    .about-box{min-height:520px;background:var(--dark3);display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,168,76,.1)}
-    .about-box span{font-family:'Cormorant Garamond',serif;font-size:170px;color:rgba(201,168,76,.1)}
-    .about-text p,.booking-info p{font-size:15px;line-height:1.9;color:var(--text-dim);margin-bottom:18px}
-    .booking-form,.info-card,.map-card{background:var(--dark3);padding:38px;border:1px solid rgba(201,168,76,.1)}
-    .form-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--cream);margin-bottom:28px}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .form-group{margin-bottom:18px}
-    .form-group label{display:block;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.15);color:var(--cream);padding:14px 16px;font-family:inherit;font-size:14px}
-    .form-group textarea{min-height:100px;resize:vertical}
-    .form-submit{width:100%;background:var(--gold);color:var(--dark);border:none;padding:18px;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:500;cursor:pointer}
-    .contact-item{padding:18px;border:1px solid rgba(201,168,76,.1);margin-top:14px}
-    .contact-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
-    .contact-val{color:var(--cream);text-decoration:none;line-height:1.7}
-    .map-card iframe{width:100%;height:360px;border:none;filter:grayscale(100%) invert(90%) contrast(.85) brightness(.5) sepia(30%)}
-    footer{background:var(--dark);border-top:1px solid rgba(201,168,76,.1);padding:42px 0;color:var(--text-dim)}
-    .footer-inner{display:flex;justify-content:space-between;gap:22px;align-items:center;flex-wrap:wrap}
-    .footer-brand{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:5px;color:var(--gold)}
-    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(90px);transition:transform .35s ease;background:var(--gold);color:var(--dark);padding:14px 28px;z-index:1000;font-size:12px;letter-spacing:2px;text-transform:uppercase}
-    .toast.show{transform:translateX(-50%) translateY(0)}
-    @media (max-width:900px){nav{padding:18px 22px}.nav-links{display:none}.container{padding:0 22px}.services-grid,.about-grid,.booking-wrap,.location-grid,.form-row{grid-template-columns:1fr}section{padding:78px 0}}
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --gold-dim: #8a6a28;
+      --cream: #f5f0e8;
+      --dark: #0e0c09;
+      --dark2: #1a1710;
+      --dark3: #231f18;
+      --text: #d4cfc4;
+      --text-dim: #7a7468;
+      --danger: #c0392b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    .cursor {
+      position: fixed;
+      width: 10px; height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
+    }
+    .cursor-ring {
+      position: fixed;
+      width: 36px; height: 36px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease, width 0.3s, height 0.3s;
+      opacity: 0.6;
+    }
+    body:hover .cursor { opacity: 1; }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9997;
+      opacity: 0.35;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      background: linear-gradient(to bottom, rgba(14,12,9,0.95) 0%, transparent 100%);
+      backdrop-filter: blur(2px);
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 28px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: none;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    #hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 70% 50%, #2a2010 0%, var(--dark) 70%);
+    }
+    .hero-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-scissors {
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 320px;
+      opacity: 0.04;
+      line-height: 1;
+      animation: floatSlow 8s ease-in-out infinite;
+      user-select: none;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(-50%) rotate(-15deg); }
+      50% { transform: translateY(-52%) rotate(-12deg); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(72px, 10vw, 140px);
+      font-weight: 300;
+      line-height: 0.9;
+      color: var(--cream);
+      letter-spacing: -2px;
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-subtitle {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(18px, 3vw, 36px);
+      letter-spacing: 12px;
+      color: var(--text-dim);
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.6s forwards;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 16px 48px;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      transition: all 0.3s;
+      cursor: none;
+      display: inline-block;
+      border: none;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      padding: 16px 48px;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.3s;
+      cursor: none;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.2s forwards;
+    }
+    .hero-scroll span {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section { padding: 120px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      width: 40px; height: 1px;
+      background: var(--gold);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 24px;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    #hizmetler { background: var(--dark2); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+    .service-card {
+      background: var(--dark3);
+      padding: 48px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s, background 0.4s;
+      cursor: none;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--gold);
+      transition: width 0.4s;
+    }
+    .service-card:hover { background: #1e1b13; transform: translateY(-4px); }
+    .service-card:hover::before { width: 100%; }
+    .service-icon {
+      font-size: 36px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .service-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+    }
+    .service-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: var(--gold);
+    }
+    .service-price span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+    }
+
+    #hakkinda {
+      background: var(--dark);
+      overflow: hidden;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+      height: 560px;
+    }
+    .about-box-main {
+      position: absolute;
+      right: 0; top: 0;
+      width: 78%;
+      height: 88%;
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .about-initials {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 180px;
+      font-weight: 300;
+      color: rgba(201,168,76,0.08);
+      line-height: 1;
+      user-select: none;
+      letter-spacing: -8px;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 0; left: 0;
+      background: var(--gold);
+      color: var(--dark);
+      padding: 28px 32px;
+      width: 55%;
+    }
+    .about-badge-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 56px;
+      line-height: 1;
+      display: block;
+    }
+    .about-badge-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .about-accent-line {
+      position: absolute;
+      top: 50%; left: 0;
+      width: 3px;
+      height: 60%;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      transform: translateY(-50%);
+    }
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .about-text p strong {
+      color: var(--cream);
+      font-weight: 400;
+    }
+    .about-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    #randevu {
+      background: var(--dark2);
+      position: relative;
+      overflow: hidden;
+    }
+    #randevu::before {
+      content: 'RANDEVU';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 220px;
+      color: rgba(201,168,76,0.025);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 20px;
+    }
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+      position: relative;
+      z-index: 2;
+    }
+    .booking-info p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-dim);
+      margin-bottom: 40px;
+    }
+    .booking-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      border: 1px solid rgba(201,168,76,0.1);
+      transition: border-color 0.3s;
+      cursor: none;
+    }
+    .contact-item:hover { border-color: var(--gold); }
+    .contact-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contact-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .contact-val {
+      font-size: 14px;
+      color: var(--cream);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-val:hover { color: var(--gold); }
+
+    .booking-form {
+      background: var(--dark3);
+      padding: 48px;
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 32px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,168,76,0.15);
+      color: var(--cream);
+      padding: 14px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.3s;
+      appearance: none;
+      cursor: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group select option { background: var(--dark3); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      padding: 18px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: none;
+      transition: all 0.3s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--gold-light); }
+    .form-submit:disabled {
+      opacity: 0.7;
+      cursor: default;
+    }
+
+    #instagram {
+      background: var(--dark);
+      text-align: center;
+    }
+    .ig-handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 5vw, 56px);
+      letter-spacing: 6px;
+      color: var(--cream);
+      text-decoration: none;
+      margin-bottom: 64px;
+      transition: color 0.3s;
+    }
+    .ig-handle:hover { color: var(--gold); }
+    .ig-at { color: var(--gold); }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-bottom: 48px;
+    }
+    .ig-card {
+      aspect-ratio: 1;
+      background: var(--dark3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      cursor: none;
+    }
+    .ig-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(201,168,76,0.12);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .ig-card:hover::before { opacity: 1; }
+    .ig-placeholder {
+      font-size: 32px;
+      color: rgba(201,168,76,0.15);
+    }
+    .ig-card-label {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+    .ig-card:nth-child(1) { background: linear-gradient(135deg, #1a1710, #2a2010); }
+    .ig-card:nth-child(2) { background: linear-gradient(135deg, #18150e, #22200f); }
+    .ig-card:nth-child(3) { background: linear-gradient(135deg, #1e1a0f, #151210); }
+    .ig-card:nth-child(4) { background: linear-gradient(135deg, #231f12, #1a1710); }
+    .ig-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold);
+      padding: 16px 40px;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: none;
+    }
+    .ig-btn:hover { background: var(--gold); color: var(--dark); }
+
+    #konum { background: var(--dark2); }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .location-address {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.5;
+      margin: 24px 0 32px;
+    }
+    .hours-block {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+    .hours-title {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+    }
+    .hours-day { color: var(--text-dim); }
+    .hours-time { color: var(--cream); }
+    .hours-time.closed { color: var(--gold-dim); }
+    .map-frame {
+      height: 440px;
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(100%) invert(90%) contrast(0.85) brightness(0.5) sepia(30%);
+    }
+    .map-overlay-text {
+      position: absolute;
+      top: 20px; left: 20px;
+      background: rgba(14,12,9,0.9);
+      border: 1px solid var(--gold);
+      padding: 12px 20px;
+    }
+    .map-overlay-text span {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201,168,76,0.1);
+      padding: 60px 0 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 48px;
+    }
+    .footer-brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 6px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    .footer-col-title {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.3s;
+      cursor: none;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+    .footer-social a {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(201,168,76,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 16px;
+      transition: all 0.3s;
+      cursor: none;
+    }
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+
+    .toast {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--gold);
+      color: var(--dark);
+      padding: 16px 36px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      z-index: 1000;
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+      pointer-events: none;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    .gold-divider {
+      width: 60px; height: 1px;
+      background: var(--gold);
+      margin: 32px 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+      .container { padding: 0 24px; }
+      section { padding: 80px 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-visual { height: 300px; }
+      .booking-wrap { grid-template-columns: 1fr; }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); }
+      .location-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+      .hero-scissors { font-size: 160px; right: -5%; opacity: 0.03; }
+    }
   </style>
 </head>
 <body>
-  <div class="toast" id="toast">Randevunuz Alındı</div>
-  <nav>
-    <a href="#hero" class="nav-logo">ERHAN TAŞ</a>
-    <ul class="nav-links">
-      <li><a href="#hizmetler">Hizmetler</a></li>
-      <li><a href="#hakkinda">Hakkında</a></li>
-      <li><a href="#randevu">Randevu</a></li>
-      <li><a href="#konum">Konum</a></li>
-    </ul>
-    <a href="/erhan-giris" class="nav-cta">Erhan Giriş</a>
-  </nav>
 
-  <section id="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Beylikdüzü · İstanbul</p>
-      <h1 class="hero-title">Erhan <em>Taş</em></h1>
-      <p class="hero-subtitle">Hair Artist</p>
-      <div class="hero-btns">
-        <a href="#randevu" class="btn-primary">Randevu Al</a>
-        <a href="#hakkinda" class="btn-secondary">Hakkında</a>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="toast" id="toast">Randevunuz Alındı ✓</div>
+
+<nav>
+  <a href="#hero" class="nav-logo">ERHAN TAŞ</a>
+  <ul class="nav-links">
+    <li><a href="#hizmetler">Hizmetler</a></li>
+    <li><a href="#hakkinda">Hakkında</a></li>
+    <li><a href="#instagram">Galeri</a></li>
+    <li><a href="#konum">Konum</a></li>
+  </ul>
+  <a href="#randevu" class="nav-cta">Randevu Al</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-scissors">✂</div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Beylikdüzü · İstanbul</p>
+    <h1 class="hero-title">Erhan <em>Taş</em></h1>
+    <p class="hero-subtitle">Hair Artist</p>
+    <div class="hero-btns">
+      <a href="#randevu" class="btn-primary">Randevu Al</a>
+      <a href="#hakkinda" class="btn-secondary">Hakkında</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Keşfet</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<section id="hizmetler">
+  <div class="container">
+    <p class="section-eyebrow reveal">Hizmetler</p>
+    <h2 class="section-title reveal">Saç Sanatı,<br><em>Her Detayda</em></h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-icon">✂</span>
+        <h3 class="service-name">Klasik Kesim</h3>
+        <p class="service-desc">Yılların deneyimiyle şekillenen, kişiye özel geleneksel saç kesim tekniği.</p>
+        <div class="service-price">₺650 <span>/ seans</span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🪒</span>
+        <h3 class="service-name">Sakal Tasarımı</h3>
+        <p class="service-desc">Yüz hatlarınıza uygun özel sakal tasarımı, şekillendirme ve bakım.</p>
+        <div class="service-price">₺200 <span>/ seans</span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">💈</span>
+        <h3 class="service-name">Fade & Taper</h3>
+        <p class="service-desc">Modern geçiş teknikleriyle kusursuz fade ve taper kesim uygulamaları.</p>
+        <div class="service-price">₺400 <span>/ seans</span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">✦</span>
+        <h3 class="service-name">Saç Boyama</h3>
+        <p class="service-desc">Profesyonel renklendirme, vurgulama ve ombre teknikleriyle renk dönüşümü.</p>
+        <div class="service-price">₺600+ <span>/ seans</span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">◈</span>
+        <h3 class="service-name">Komple Bakım</h3>
+        <p class="service-desc">Kesim, sakal ve yüz bakımını bir arada sunan premium komple bakım paketi.</p>
+        <div class="service-price">₺700 <span>/ seans</span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">⬡</span>
+        <h3 class="service-name">Gelin & Damat</h3>
+        <p class="service-desc">Özel günleriniz için kapsamlı saç ve sakal bakımı ile kişisel stil danışmanlığı.</p>
+        <div class="service-price">₺1.200 <span>/ seans</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="hizmetler">
-    <div class="container">
-      <p class="section-eyebrow">Hizmetler</p>
-      <h2 class="section-title">Saç Sanatı,<br><em>Her Detayda</em></h2>
-      <div class="services-grid">
-        <div class="service-card"><div>✂</div><h3 class="service-name">Klasik Kesim</h3><p class="service-desc">Kişiye özel geleneksel saç kesim tekniği.</p><div class="service-price">₺650</div></div>
-        <div class="service-card"><div>🪒</div><h3 class="service-name">Sakal Tasarımı</h3><p class="service-desc">Yüz hatlarına uygun profesyonel sakal tasarımı.</p><div class="service-price">₺200</div></div>
-        <div class="service-card"><div>💈</div><h3 class="service-name">Fade & Taper</h3><p class="service-desc">Modern geçiş teknikleriyle kesim uygulamaları.</p><div class="service-price">₺400</div></div>
-        <div class="service-card"><div>✦</div><h3 class="service-name">Saç Boyama</h3><p class="service-desc">Profesyonel renklendirme ve ombre teknikleri.</p><div class="service-price">₺600+</div></div>
-        <div class="service-card"><div>◈</div><h3 class="service-name">Komple Bakım</h3><p class="service-desc">Kesim, sakal ve yüz bakımını bir arada sunan paket.</p><div class="service-price">₺700</div></div>
-        <div class="service-card"><div>⬡</div><h3 class="service-name">Gelin & Damat</h3><p class="service-desc">Özel günler için kapsamlı stil hazırlığı.</p><div class="service-price">₺1.200</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="hakkinda">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-box"><span>ET</span></div>
-        <div class="about-text">
-          <p class="section-eyebrow">Hakkında</p>
-          <h2 class="section-title">Saç, Bir <em>Sanat</em><br>Formudur</h2>
-          <p><strong>Erhan Taş</strong>, Beylikdüzü'nde hizmet veren deneyimli bir saç sanatçısıdır. Her kesimde kişinin karakterini ve yaşam stilini yansıtmayı hedefler.</p>
-          <p>Klasik berberlik anlayışını modern tekniklerle birleştirerek kişiye özel bir deneyim sunar. Fade, taper, sakal tasarımı ve saç boyamada uzmanlaşmıştır.</p>
-          <p>Bu siteden bırakılan randevular doğrudan Erhan abi için hazırlanan özel yönetim paneline düşer.</p>
+<section id="hakkinda">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-box-main">
+          <span class="about-initials">ET</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="randevu">
-    <div class="container">
-      <div class="booking-wrap">
-        <div class="booking-info">
-          <p class="section-eyebrow">Randevu</p>
-          <h2 class="section-title">Stilinizi<br><em>Birlikte</em><br>Yaratın</h2>
-          <p>Formu doldurduğunuz anda kayıt sistemde oluşur. Erhan abi kendi paneline giriş yaptığında bu randevuları anında görebilir.</p>
-          <div class="contact-item"><p class="contact-label">Telefon</p><a class="contact-val" href="tel:+905398554321">+90 539 855 43 21</a></div>
-          <div class="contact-item"><p class="contact-label">E-posta</p><a class="contact-val" href="mailto:erhantashairartist@gmail.com">erhantashairartist@gmail.com</a></div>
-          <div class="contact-item"><p class="contact-label">Adres</p><div class="contact-val">Barış Mh. Samsun Cd. No:21/4<br>Beylikdüzü, İstanbul</div></div>
+        <div class="about-badge">
+          <span class="about-badge-num">10+</span>
+          <span class="about-badge-label">Yıl Deneyim</span>
         </div>
-        <div class="booking-form">
-          <h3 class="form-title">Randevu Formu</h3>
-          <div class="form-row">
-            <div class="form-group"><label>Ad Soyad</label><input type="text" id="name" placeholder="Adınız Soyadınız" /></div>
-            <div class="form-group"><label>Telefon</label><input type="tel" id="phone" placeholder="+90 5__ ___ __ __" /></div>
+        <div class="about-accent-line"></div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow reveal">Hakkında</p>
+        <h2 class="section-title reveal">Saç, Bir <em>Sanat</em><br>Formudur</h2>
+        <div class="gold-divider reveal"></div>
+        <p class="reveal">
+          <strong>Erhan Taş</strong>, Beylikdüzü İstanbul'da hizmet veren deneyimli bir hair artist olarak kişiye özel saç ve sakal tasarımları sunar.
+        </p>
+        <p class="reveal">
+          Klasik berberlik sanatını modern tekniklerle harmanlayan Erhan Taş, fade, taper, sakal tasarımı ve saç boyama alanlarında uzmanlaşmıştır.
+        </p>
+        <p class="reveal">
+          Her randevuda amaç yalnızca kesim değil, size özel bir stil deneyimi oluşturmaktır.
+        </p>
+        <div class="about-stats reveal">
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Yıl Deneyim</span>
           </div>
-          <div class="form-row">
-            <div class="form-group"><label>Tarih</label><input type="date" id="date" /></div>
-            <div class="form-group"><label>Saat</label>
-              <select id="time">
-                <option value="">Saat seçin</option><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
-              </select>
+          <div class="stat-item">
+            <span class="stat-num">5K+</span>
+            <span class="stat-label">Mutlu Müşteri</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Tutku</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="randevu">
+  <div class="container">
+    <div class="booking-wrap">
+      <div class="booking-info">
+        <p class="section-eyebrow reveal">Randevu</p>
+        <h2 class="section-title reveal">Stilinizi<br><em>Birlikte</em><br>Yaratın</h2>
+        <p class="reveal">Formu doldurun. Randevu talebiniz sisteme düşer ve en kısa sürede değerlendirilir.</p>
+        <div class="booking-contacts">
+          <div class="contact-item reveal">
+            <span class="contact-icon">📞</span>
+            <div class="contact-detail">
+              <p class="contact-label">Telefon</p>
+              <a href="tel:+905398554321" class="contact-val">+90 539 855 43 21</a>
             </div>
           </div>
-          <div class="form-group"><label>Hizmet</label>
-            <select id="service">
-              <option value="">Hizmet seçin</option><option>Klasik Kesim</option><option>Sakal Tasarımı</option><option>Fade & Taper</option><option>Saç Boyama</option><option>Komple Bakım</option><option>Gelin & Damat</option>
+          <div class="contact-item reveal">
+            <span class="contact-icon">✉</span>
+            <div class="contact-detail">
+              <p class="contact-label">E-posta</p>
+              <a href="mailto:erhantashairartist@gmail.com" class="contact-val">erhantashairartist@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-icon">📍</span>
+            <div class="contact-detail">
+              <p class="contact-label">Adres</p>
+              <span class="contact-val">Barış Mh. Samsun Cd. No:21/4<br>Beylikdüzü, İstanbul</span>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-icon">📸</span>
+            <div class="contact-detail">
+              <p class="contact-label">Instagram</p>
+              <a href="https://instagram.com/erhantashairartist" target="_blank" class="contact-val">@erhantashairartist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form reveal">
+        <h3 class="form-title">Randevu Formu</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad Soyad</label>
+            <input type="text" id="name" placeholder="Adınız Soyadınız"/>
+          </div>
+          <div class="form-group">
+            <label>Telefon</label>
+            <input type="tel" id="phone" placeholder="+90 5__ ___ __ __"/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tarih</label>
+            <input type="date" id="date"/>
+          </div>
+          <div class="form-group">
+            <label>Saat</label>
+            <select id="time">
+              <option value="">Saat seçin</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
             </select>
           </div>
-          <div class="form-group"><label>Notunuz (Opsiyonel)</label><textarea id="note" placeholder="Özel bir isteğiniz var mı?"></textarea></div>
-          <button class="form-submit" id="submitBtn">Randevu Onayla →</button>
+        </div>
+
+        <div class="form-group">
+          <label>Hizmet</label>
+          <select id="service">
+            <option value="">Hizmet seçin</option>
+            <option>Klasik Kesim</option>
+            <option>Sakal Tasarımı</option>
+            <option>Fade & Taper</option>
+            <option>Saç Boyama</option>
+            <option>Komple Bakım</option>
+            <option>Gelin & Damat</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Notunuz (Opsiyonel)</label>
+          <textarea id="note" placeholder="Özel bir isteğiniz var mı?"></textarea>
+        </div>
+
+        <button class="form-submit" id="submitBtn" onclick="submitForm()">Randevu Onayla →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instagram">
+  <div class="container">
+    <p class="section-eyebrow reveal" style="justify-content:center;">Galeri</p>
+    <a href="https://instagram.com/erhantashairartist" target="_blank" class="ig-handle reveal">
+      <span class="ig-at">@</span>erhantashairartist
+    </a>
+    <div class="ig-grid reveal">
+      <div class="ig-card">
+        <span class="ig-placeholder">✂</span>
+        <span class="ig-card-label">Fade</span>
+      </div>
+      <div class="ig-card">
+        <span class="ig-placeholder">◈</span>
+        <span class="ig-card-label">Sakal</span>
+      </div>
+      <div class="ig-card">
+        <span class="ig-placeholder">✦</span>
+        <span class="ig-card-label">Renk</span>
+      </div>
+      <div class="ig-card">
+        <span class="ig-placeholder">💈</span>
+        <span class="ig-card-label">Klasik</span>
+      </div>
+    </div>
+    <a href="https://instagram.com/erhantashairartist" target="_blank" class="ig-btn reveal">
+      <span>📸</span> Instagram'da Takip Et
+    </a>
+  </div>
+</section>
+
+<section id="konum">
+  <div class="container">
+    <p class="section-eyebrow reveal">Konum</p>
+    <h2 class="section-title reveal">Bizi <em>Ziyaret</em> Edin</h2>
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <p class="location-address">Barış Mh. Samsun Cd.<br>No:21/4 Beylikdüzü,<br>İstanbul</p>
+        <a href="https://maps.google.com/?q=Barış+Mh+Samsun+Cd+No+21+Beylikdüzü+İstanbul" target="_blank" class="btn-primary" style="display:inline-block; margin-bottom:40px;">Yol Tarifi Al →</a>
+        <div class="hours-block">
+          <p class="hours-title">Çalışma Saatleri</p>
+          <div class="hours-row"><span class="hours-day">Pazartesi – Cuma</span><span class="hours-time">09:00 – 20:00</span></div>
+          <div class="hours-row"><span class="hours-day">Cumartesi</span><span class="hours-time">09:00 – 19:00</span></div>
+          <div class="hours-row"><span class="hours-day">Pazar</span><span class="hours-time closed">Kapalı</span></div>
+        </div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.9985742097595!2d28.64!3d41.00!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa1a2de7a6e79%3A0x73aaa26c7eeef!2sBeyliközü%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-overlay-text">
+          <span>Beylikdüzü · İstanbul</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="konum">
-    <div class="container">
-      <p class="section-eyebrow">Konum</p>
-      <h2 class="section-title">Bizi <em>Ziyaret</em> Edin</h2>
-      <div class="location-grid">
-        <div class="info-card">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);line-height:1.4;margin-bottom:22px">Barış Mh. Samsun Cd.<br>No:21/4 Beylikdüzü,<br>İstanbul</p>
-          <a href="https://maps.google.com/?q=Barış+Mh+Samsun+Cd+No+21+Beylikdüzü+İstanbul" target="_blank" class="btn-primary">Yol Tarifi Al →</a>
-        </div>
-        <div class="map-card">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.9985742097595!2d28.64!3d41.00!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa1a2de7a6e79%3A0x73aaa26c7eeef!2sBeylik%C3%B6z%C3%BC%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" loading="lazy"></iframe>
-        </div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand-name">Erhan Taş</span>
+        <p class="footer-tagline">"Saç, karakterin<br>sessiz dilidir."</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Hızlı Erişim</p>
+        <ul class="footer-links">
+          <li><a href="#hizmetler">Hizmetler</a></li>
+          <li><a href="#hakkinda">Hakkında</a></li>
+          <li><a href="#instagram">Galeri</a></li>
+          <li><a href="#randevu">Randevu</a></li>
+          <li><a href="#konum">Konum</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">İletişim</p>
+        <ul class="footer-links">
+          <li><a href="tel:+905398554321">+90 539 855 43 21</a></li>
+          <li><a href="mailto:erhantashairartist@gmail.com">erhantashairartist@gmail.com</a></li>
+          <li><a href="https://instagram.com/erhantashairartist" target="_blank">@erhantashairartist</a></li>
+          <li><a href="#">Barış Mh. Samsun Cd. No:21/4</a></li>
+          <li><a href="#">Beylikdüzü, İstanbul</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">ERHAN TAŞ</div>
-        <div>© 2026 Erhan Taş Hair Artist. Tüm hakları saklıdır.</div>
-        <div><a href="/erhan-giris" class="nav-cta">Erhan Paneli</a></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Erhan Taş Hair Artist. Tüm hakları saklıdır.</span>
+      <div class="footer-social">
+        <a href="https://instagram.com/erhantashairartist" target="_blank" title="Instagram">📸</a>
+        <a href="tel:+905398554321" title="Ara">📞</a>
+        <a href="mailto:erhantashairartist@gmail.com" title="Mail">✉</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    const dateInput = document.getElementById('date');
-    dateInput.min = new Date().toISOString().split('T')[0];
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
 
-    function showToast(message, success = true) {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.style.background = success ? 'var(--gold)' : '#c0392b';
-      toast.style.color = success ? 'var(--dark)' : '#fff';
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 3500);
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  function animateCursor() {
+    if (cursor && ring) {
+      cursor.style.left = mx + 'px';
+      cursor.style.top = my + 'px';
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
     }
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
 
-    async function submitAppointment() {
-      const payload = {
-        name: document.getElementById('name').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        date: document.getElementById('date').value,
-        time: document.getElementById('time').value,
-        service: document.getElementById('service').value,
-        note: document.getElementById('note').value.trim()
-      };
+  document.querySelectorAll('a, button, .service-card, .contact-item, .ig-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      if (!cursor || !ring) return;
+      cursor.style.width = '18px';
+      cursor.style.height = '18px';
+      ring.style.width = '52px';
+      ring.style.height = '52px';
+    });
+    el.addEventListener('mouseleave', () => {
+      if (!cursor || !ring) return;
+      cursor.style.width = '10px';
+      cursor.style.height = '10px';
+      ring.style.width = '36px';
+      ring.style.height = '36px';
+    });
+  });
 
-      const button = document.getElementById('submitBtn');
-      button.disabled = true;
-      button.textContent = 'Gönderiliyor...';
-
-      try {
-        const res = await fetch('/api/appointments', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        const data = await res.json();
-        if (!res.ok || !data.ok) throw new Error(data.message || 'İşlem başarısız oldu.');
-
-        document.getElementById('name').value = '';
-        document.getElementById('phone').value = '';
-        document.getElementById('date').value = '';
-        document.getElementById('time').value = '';
-        document.getElementById('service').value = '';
-        document.getElementById('note').value = '';
-        showToast('Randevunuz alındı ✓');
-      } catch (error) {
-        showToast(error.message || 'Randevu alınamadı.', false);
-      } finally {
-        button.disabled = false;
-        button.textContent = 'Randevu Onayla →';
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
       }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+
+  async function submitForm() {
+    const submitBtn = document.getElementById('submitBtn');
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const service = document.getElementById('service').value;
+    const note = document.getElementById('note').value.trim();
+
+    if (!name || !phone || !date || !time || !service) {
+      showToast('Lütfen tüm zorunlu alanları doldurun.', false);
+      return;
     }
 
-    document.getElementById('submitBtn').addEventListener('click', submitAppointment);
-  </script>
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Gönderiliyor...';
+
+    try {
+      const res = await fetch('/api/appointments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, date, time, service, note })
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.ok) {
+        showToast(data.message || 'Bir hata oluştu.', false);
+        return;
+      }
+
+      showToast('Randevunuz Alındı ✓', true);
+
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('date').value = '';
+      document.getElementById('time').value = '';
+      document.getElementById('service').value = '';
+      document.getElementById('note').value = '';
+    } catch (error) {
+      showToast('Sunucuya bağlanılamadı.', false);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Randevu Onayla →';
+    }
+  }
+
+  function showToast(msg, success = true) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.style.background = success ? 'var(--gold)' : 'var(--danger)';
+    t.style.color = success ? 'var(--dark)' : '#fff';
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.background = window.scrollY > 50 ? 'rgba(14,12,9,0.97)' : '';
+  });
+</script>
 </body>
 </html>
