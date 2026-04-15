@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import os
 import sqlite3
+import time
 from datetime import datetime
+from collections import defaultdict
 from functools import wraps
 from pathlib import Path
 from typing import Any
@@ -14,10 +16,33 @@ DB_PATH = BASE_DIR / 'appointments.db'
 SECRET_KEY = os.environ.get('ERHAN_SECRET_KEY', 'change-this-secret-key')
 OWNER_USERNAME = os.environ.get('ERHAN_OWNER_USERNAME', 'Erhan')
 OWNER_PASSWORD = os.environ.get('ERHAN_OWNER_PASSWORD', 'Erhan!2026#Kuafor')
+LOGIN_ATTEMPTS = defaultdict(list)
+MAX_LOGIN_ATTEMPTS = 5
+LOGIN_BLOCK_SECONDS = 300  # 5 dakika
 
 app = Flask(__name__)
 app.config.update(SECRET_KEY=SECRET_KEY)
+def get_client_ip():
+    forwarded_for = request.headers.get("X-Forwarded-For", "")
+    if forwarded_for:
+        return forwarded_for.split(",")[0].strip()
+    return request.remote_addr or "unknown"
 
+
+def is_ip_blocked(ip):
+    now = time.time()
+    LOGIN_ATTEMPTS[ip] = [t for t in LOGIN_ATTEMPTS[ip] if now - t < LOGIN_BLOCK_SECONDS]
+    return len(LOGIN_ATTEMPTS[ip]) >= MAX_LOGIN_ATTEMPTS
+
+
+def register_failed_attempt(ip):
+    now = time.time()
+    LOGIN_ATTEMPTS[ip] = [t for t in LOGIN_ATTEMPTS[ip] if now - t < LOGIN_BLOCK_SECONDS]
+    LOGIN_ATTEMPTS[ip].append(now)
+
+
+def clear_failed_attempts(ip):
+    LOGIN_ATTEMPTS.pop(ip, None)
 
 def get_db() -> sqlite3.Connection:
     db = getattr(g, '_database', None)
@@ -133,16 +158,21 @@ def create_appointment():
 
 @app.post('/admin/login')
 def admin_login():
-    data = request.get_json(silent=True) or request.form.to_dict()
-    username = str(data.get('username', '')).strip()
-    password = str(data.get('password', ''))
+    ip = get_client_ip()
+
+    if is_ip_blocked(ip):
+        return redirect(url_for("admin_login_page"))
+
+    username = request.form.get("username", "").strip()
+    password = request.form.get("password", "")
 
     if username == OWNER_USERNAME and password == OWNER_PASSWORD:
-        session['owner_logged_in'] = True
-        return jsonify({'ok': True, 'redirect': url_for('admin_dashboard')})
+        session["admin_logged_in"] = True
+        clear_failed_attempts(ip)
+        return redirect(url_for("admin_dashboard"))
 
-    return jsonify({'ok': False, 'message': 'Kullanıcı adı veya şifre hatalı.'}), 401
-
+    register_failed_attempt(ip)
+    return redirect(url_for("admin_login_page"))
 
 @app.post('/admin/logout')
 @login_required
