@@ -161,19 +161,28 @@ def admin_login():
     ip = get_client_ip()
 
     if is_ip_blocked(ip):
-        return redirect(url_for("admin_login_page"))
+        return jsonify({
+            'ok': False,
+            'message': 'Çok fazla hatalı deneme. 5 dakika sonra tekrar deneyin.'
+        }), 429
 
-    username = request.form.get("username", "").strip()
-    password = request.form.get("password", "")
+    data = request.get_json() or {}
+    username = data.get('username', '').strip()
+    password = data.get('password', '')
 
     if username == OWNER_USERNAME and password == OWNER_PASSWORD:
-        session["admin_logged_in"] = True
+        session['admin_logged_in'] = True
         clear_failed_attempts(ip)
-        return redirect(url_for("admin_dashboard"))
+        return jsonify({
+            'ok': True,
+            'redirect': url_for('admin_dashboard')
+        })
 
     register_failed_attempt(ip)
-    return redirect(url_for("admin_login_page"))
-
+    return jsonify({
+        'ok': False,
+        'message': 'Kullanıcı adı veya şifre hatalı.'
+    }), 401
 @app.post('/admin/logout')
 @login_required
 def admin_logout():
