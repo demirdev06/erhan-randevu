@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Erhan Taş — Hair Artist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --gold:#c9a84c; --gold-light:#e8c96a; --cream:#f5f0e8; --dark:#0e0c09; --dark2:#1a1710; --dark3:#231f18; --text:#d4cfc4; --text-dim:#7a7468; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 42px;background:linear-gradient(to bottom, rgba(14,12,9,.95), transparent)}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;color:var(--gold);text-decoration:none}
+    .nav-links{display:flex;gap:34px;list-style:none}
+    .nav-links a,.nav-cta{text-decoration:none;color:var(--text-dim);font-size:12px;letter-spacing:2px;text-transform:uppercase}
+    .nav-cta{border:1px solid var(--gold);padding:10px 20px;color:var(--gold)}
+    section{padding:110px 0}
+    .container{max-width:1180px;margin:0 auto;padding:0 32px}
+    #hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(ellipse 60% 80% at 70% 50%, #2a2010 0%, var(--dark) 70%)}
+    .hero-content{text-align:center;padding:0 20px}
+    .hero-eyebrow{font-size:11px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(72px,10vw,138px);font-weight:300;line-height:.92;color:var(--cream)}
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-subtitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,3vw,36px);letter-spacing:12px;color:var(--text-dim);margin:12px 0 46px}
+    .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn-primary,.btn-secondary{display:inline-block;text-decoration:none;padding:16px 34px;font-size:11px;letter-spacing:3px;text-transform:uppercase}
+    .btn-primary{background:var(--gold);color:var(--dark)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.15);color:var(--cream)}
+    .section-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,72px);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:24px}
+    .section-title em{color:var(--gold);font-style:italic}
+    #hizmetler,#randevu,#konum{background:var(--dark2)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+    .service-card{background:var(--dark3);padding:40px 30px}
+    .service-name{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin:14px 0 12px}
+    .service-desc{font-size:14px;line-height:1.8;color:var(--text-dim);margin-bottom:20px}
+    .service-price{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;color:var(--gold)}
+    .about-grid,.booking-wrap,.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .about-box{min-height:520px;background:var(--dark3);display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,168,76,.1)}
+    .about-box span{font-family:'Cormorant Garamond',serif;font-size:170px;color:rgba(201,168,76,.1)}
+    .about-text p,.booking-info p{font-size:15px;line-height:1.9;color:var(--text-dim);margin-bottom:18px}
+    .booking-form,.info-card,.map-card{background:var(--dark3);padding:38px;border:1px solid rgba(201,168,76,.1)}
+    .form-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--cream);margin-bottom:28px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form-group{margin-bottom:18px}
+    .form-group label{display:block;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.15);color:var(--cream);padding:14px 16px;font-family:inherit;font-size:14px}
+    .form-group textarea{min-height:100px;resize:vertical}
+    .form-submit{width:100%;background:var(--gold);color:var(--dark);border:none;padding:18px;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:500;cursor:pointer}
+    .contact-item{padding:18px;border:1px solid rgba(201,168,76,.1);margin-top:14px}
+    .contact-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+    .contact-val{color:var(--cream);text-decoration:none;line-height:1.7}
+    .map-card iframe{width:100%;height:360px;border:none;filter:grayscale(100%) invert(90%) contrast(.85) brightness(.5) sepia(30%)}
+    footer{background:var(--dark);border-top:1px solid rgba(201,168,76,.1);padding:42px 0;color:var(--text-dim)}
+    .footer-inner{display:flex;justify-content:space-between;gap:22px;align-items:center;flex-wrap:wrap}
+    .footer-brand{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:5px;color:var(--gold)}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(90px);transition:transform .35s ease;background:var(--gold);color:var(--dark);padding:14px 28px;z-index:1000;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+    .toast.show{transform:translateX(-50%) translateY(0)}
+    @media (max-width:900px){nav{padding:18px 22px}.nav-links{display:none}.container{padding:0 22px}.services-grid,.about-grid,.booking-wrap,.location-grid,.form-row{grid-template-columns:1fr}section{padding:78px 0}}
+  </style>
+</head>
+<body>
+  <div class="toast" id="toast">Randevunuz Alındı</div>
+  <nav>
+    <a href="#hero" class="nav-logo">ERHAN TAŞ</a>
+    <ul class="nav-links">
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#hakkinda">Hakkında</a></li>
+      <li><a href="#randevu">Randevu</a></li>
+      <li><a href="#konum">Konum</a></li>
+    </ul>
+    <a href="/erhan-giris" class="nav-cta">Erhan Giriş</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Beylikdüzü · İstanbul</p>
+      <h1 class="hero-title">Erhan <em>Taş</em></h1>
+      <p class="hero-subtitle">Hair Artist</p>
+      <div class="hero-btns">
+        <a href="#randevu" class="btn-primary">Randevu Al</a>
+        <a href="#hakkinda" class="btn-secondary">Hakkında</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hizmetler">
+    <div class="container">
+      <p class="section-eyebrow">Hizmetler</p>
+      <h2 class="section-title">Saç Sanatı,<br><em>Her Detayda</em></h2>
+      <div class="services-grid">
+        <div class="service-card"><div>✂</div><h3 class="service-name">Klasik Kesim</h3><p class="service-desc">Kişiye özel geleneksel saç kesim tekniği.</p><div class="service-price">₺650</div></div>
+        <div class="service-card"><div>🪒</div><h3 class="service-name">Sakal Tasarımı</h3><p class="service-desc">Yüz hatlarına uygun profesyonel sakal tasarımı.</p><div class="service-price">₺200</div></div>
+        <div class="service-card"><div>💈</div><h3 class="service-name">Fade & Taper</h3><p class="service-desc">Modern geçiş teknikleriyle kesim uygulamaları.</p><div class="service-price">₺400</div></div>
+        <div class="service-card"><div>✦</div><h3 class="service-name">Saç Boyama</h3><p class="service-desc">Profesyonel renklendirme ve ombre teknikleri.</p><div class="service-price">₺600+</div></div>
+        <div class="service-card"><div>◈</div><h3 class="service-name">Komple Bakım</h3><p class="service-desc">Kesim, sakal ve yüz bakımını bir arada sunan paket.</p><div class="service-price">₺700</div></div>
+        <div class="service-card"><div>⬡</div><h3 class="service-name">Gelin & Damat</h3><p class="service-desc">Özel günler için kapsamlı stil hazırlığı.</p><div class="service-price">₺1.200</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hakkinda">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-box"><span>ET</span></div>
+        <div class="about-text">
+          <p class="section-eyebrow">Hakkında</p>
+          <h2 class="section-title">Saç, Bir <em>Sanat</em><br>Formudur</h2>
+          <p><strong>Erhan Taş</strong>, Beylikdüzü'nde hizmet veren deneyimli bir saç sanatçısıdır. Her kesimde kişinin karakterini ve yaşam stilini yansıtmayı hedefler.</p>
+          <p>Klasik berberlik anlayışını modern tekniklerle birleştirerek kişiye özel bir deneyim sunar. Fade, taper, sakal tasarımı ve saç boyamada uzmanlaşmıştır.</p>
+          <p>Bu siteden bırakılan randevular doğrudan Erhan abi için hazırlanan özel yönetim paneline düşer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="randevu">
+    <div class="container">
+      <div class="booking-wrap">
+        <div class="booking-info">
+          <p class="section-eyebrow">Randevu</p>
+          <h2 class="section-title">Stilinizi<br><em>Birlikte</em><br>Yaratın</h2>
+          <p>Formu doldurduğunuz anda kayıt sistemde oluşur. Erhan abi kendi paneline giriş yaptığında bu randevuları anında görebilir.</p>
+          <div class="contact-item"><p class="contact-label">Telefon</p><a class="contact-val" href="tel:+905398554321">+90 539 855 43 21</a></div>
+          <div class="contact-item"><p class="contact-label">E-posta</p><a class="contact-val" href="mailto:erhantashairartist@gmail.com">erhantashairartist@gmail.com</a></div>
+          <div class="contact-item"><p class="contact-label">Adres</p><div class="contact-val">Barış Mh. Samsun Cd. No:21/4<br>Beylikdüzü, İstanbul</div></div>
+        </div>
+        <div class="booking-form">
+          <h3 class="form-title">Randevu Formu</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Ad Soyad</label><input type="text" id="name" placeholder="Adınız Soyadınız" /></div>
+            <div class="form-group"><label>Telefon</label><input type="tel" id="phone" placeholder="+90 5__ ___ __ __" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Tarih</label><input type="date" id="date" /></div>
+            <div class="form-group"><label>Saat</label>
+              <select id="time">
+                <option value="">Saat seçin</option><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Hizmet</label>
+            <select id="service">
+              <option value="">Hizmet seçin</option><option>Klasik Kesim</option><option>Sakal Tasarımı</option><option>Fade & Taper</option><option>Saç Boyama</option><option>Komple Bakım</option><option>Gelin & Damat</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Notunuz (Opsiyonel)</label><textarea id="note" placeholder="Özel bir isteğiniz var mı?"></textarea></div>
+          <button class="form-submit" id="submitBtn">Randevu Onayla →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="konum">
+    <div class="container">
+      <p class="section-eyebrow">Konum</p>
+      <h2 class="section-title">Bizi <em>Ziyaret</em> Edin</h2>
+      <div class="location-grid">
+        <div class="info-card">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);line-height:1.4;margin-bottom:22px">Barış Mh. Samsun Cd.<br>No:21/4 Beylikdüzü,<br>İstanbul</p>
+          <a href="https://maps.google.com/?q=Barış+Mh+Samsun+Cd+No+21+Beylikdüzü+İstanbul" target="_blank" class="btn-primary">Yol Tarifi Al →</a>
+        </div>
+        <div class="map-card">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.9985742097595!2d28.64!3d41.00!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa1a2de7a6e79%3A0x73aaa26c7eeef!2sBeylik%C3%B6z%C3%BC%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">ERHAN TAŞ</div>
+        <div>© 2026 Erhan Taş Hair Artist. Tüm hakları saklıdır.</div>
+        <div><a href="/erhan-giris" class="nav-cta">Erhan Paneli</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const dateInput = document.getElementById('date');
+    dateInput.min = new Date().toISOString().split('T')[0];
+
+    function showToast(message, success = true) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.background = success ? 'var(--gold)' : '#c0392b';
+      toast.style.color = success ? 'var(--dark)' : '#fff';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    async function submitAppointment() {
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        service: document.getElementById('service').value,
+        note: document.getElementById('note').value.trim()
+      };
+
+      const button = document.getElementById('submitBtn');
+      button.disabled = true;
+      button.textContent = 'Gönderiliyor...';
+
+      try {
+        const res = await fetch('/api/appointments', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.message || 'İşlem başarısız oldu.');
+
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('date').value = '';
+        document.getElementById('time').value = '';
+        document.getElementById('service').value = '';
+        document.getElementById('note').value = '';
+        showToast('Randevunuz alındı ✓');
+      } catch (error) {
+        showToast(error.message || 'Randevu alınamadı.', false);
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Randevu Onayla →';
+      }
+    }
+
+    document.getElementById('submitBtn').addEventListener('click', submitAppointment);
+  </script>
+</body>
+</html>
